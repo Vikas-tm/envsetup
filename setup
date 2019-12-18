@@ -1,0 +1,39 @@
+GCP
+
+Install jenkins
+https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+Install sonar
+Download open source zip file from sonar website and unzip it -version 6.2
+unzip sonar.zip
+
+Install Jfrog
+Download open source deb file from jfrog website and install it
+sudo dkpg -i jfrog.deb
+
+Install Docker
+https://askubuntu.com/questions/1030179/package-docker-ce-has-no-installation-candidate-in-18-04
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"
+sudo apt update
+sudo apt install docker-ce
+
+Install K8S
+Install gcloud cli (just like AWS cli)
+initialize gcloud in the server(No need of gcloud cli here)/system(gcloud cli is required) - gclpoud init
+login with new account and set it up accordingly
+sudo gcloud container clusters create  my-kub-cluster - create a K8S cluster in gcloud
+sudo gcloud container clusters resize my-kub-cluster --size=0 - rezise the cluster
+Once the cluster is ready install the kubectl utility
+https://kubernetes.io/docs/tasks/tools/install-kubectl/
+sudo apt-get update && sudo apt-get install -y apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+

@@ -7,9 +7,13 @@ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sour
 sudo apt-get update
 sudo apt-get install jenkins
 
-Install sonar
-Download open source zip file from sonar website and unzip it -version 6.2
+Install SonarQube -version 6.2
+Download open source zip file from sonar website and unzip it 
 unzip sonar.zip
+
+Install Sonar Scanner - version 4.2
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
+unzip it and Update the global settings to point to your SonarQube server by editing $install_directory/conf/sonar-scanner.properties
 
 Install Jfrog
 Download open source deb file from jfrog website and install it

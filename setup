@@ -1,17 +1,24 @@
 GCP - Ubuntu 18.04
 
+Intall Java 
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk -y
+java -version
+
 Install jenkins
 https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
-sudo apt-get install jenkins
+sudo apt-get install jenkins -y
 vikas
 jen@123
-45744243efc047458af8b480f8513d19
+0a3a827395594273a7b9c77b5fd8060a
 
 Install SonarQube -version 6.2
 Download open source zip file from sonar website and unzip it 
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.2.zip
 unzip sonar.zip
 
 Install Sonar Scanner - version 4.2

@@ -6,6 +6,8 @@ sudo apt-get update
 sudo apt-get install openjdk-8-jdk -y
 java -version
 
+yum install java-1.8.0-openjdk - centos7
+
 Install jenkins
 https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -

@@ -29,7 +29,9 @@ unzip it and Update the global settings to point to your SonarQube server by edi
 
 Install Jfrog
 Download open source deb file from jfrog website and install it
-sudo dkpg -i jfrog.deb
+sudo dpkg -i jfrog.deb
+admin
+Jfrog@123
 
 Install Docker
 https://askubuntu.com/questions/1030179/package-docker-ce-has-no-installation-candidate-in-18-04
